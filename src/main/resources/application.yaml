@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: THEATRE-MANAGER
+  datasource:
+    url: jdbc:mysql://${TTR_DB_HOST:localhost}:${TTR_DB_PORT:3306}/${TTR_DB_NAME:theatres_db}
+    username: ${TTR_DB_USER_NAME:root}
+    password: ${TTR_DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: MYSQL
